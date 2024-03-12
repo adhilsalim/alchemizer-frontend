@@ -38,6 +38,65 @@ h1 {
   color: #404040;
 }
 
+#audio_main_title,
+#example_section_title {
+  font-family: "Noto Sans Khojki", sans-serif;
+  font-weight: bold;
+  color: #404040;
+}
+
+.audio-example-1,
+.audio-example-2 {
+  /* background-image: url("https://img.freepik.com/free-photo/vivid-blurred-colorful-background_58702-2655.jpg");
+  background-size: cover; */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  /* background-filter: blur(100px);
+  -webkit-background-filter: blur(100px); */
+}
+
+#audio_example_container_1,
+#audio_example_container_2 {
+  background: linear-gradient(
+    49deg,
+    #2d4de0 0,
+    #9f71f0 30%,
+    #fc6277 58%,
+    #f8ef6f 95%
+  );
+  border-radius: 15px;
+}
+
+#audio_example_container_1:hover .audio-example-1,
+#audio_example_container_2:hover .audio-example-2 {
+  border-radius: 15px;
+  transform: scale(1.05) translateY(10px);
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1));
+  transition: transform 0.2s ease-in-out;
+}
+
+.audio-example-1:hover,
+.audio-example-2:hover {
+  cursor: pointer;
+}
+
+.audio-example-1 .card-title,
+.audio-example-2 .card-title {
+  font-family: "Noto Sans Khojki", sans-serif;
+  font-weight: 500;
+  color: #404040;
+}
+
+.audio-example-1 .material-symbols-outlined,
+.audio-example-2 .material-symbols-outlined {
+  background: linear-gradient(to right, #8500ff 0%, #de00ff 100%);
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* WebKit browsers */
+  color: transparent;
+  font-size: 30px;
+}
+
 .main-section {
   margin: 10px;
   padding: 20px 0px 20px 0px;
