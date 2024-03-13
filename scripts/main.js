@@ -1,5 +1,28 @@
+console.clear();
+
+// Buttons
 const selectAudioButton = document.getElementById("select-audio");
 const selectAudioButtonText = document.getElementById("select-audio-text");
+
+// Navbar
+const navbar = document.querySelector(".nav-container");
+
+// Sections
+const heroSection = document.querySelector(".hero-main");
+
+// Intersection Observer
+const controlNavbar = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navbar.classList.add("nav-expand");
+    } else {
+      navbar.classList.remove("nav-expand");
+    }
+  });
+};
+
+const observer = new IntersectionObserver(controlNavbar);
+observer.observe(heroSection);
 
 selectAudioButton.addEventListener("click", () => {
   const input = document.createElement("input");
