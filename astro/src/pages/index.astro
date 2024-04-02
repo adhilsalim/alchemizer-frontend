@@ -5,6 +5,8 @@ import ContentCard from "../components/cards/ContentCard.astro";
 import ButtonPrimary from "../components/buttons/ButtonPrimary.astro";
 import FeatureSection from "../sections/FeatureSection.astro";
 import HeroSection from "../sections/HeroSection.astro";
+import MenuModal from "../components/modals/MenuModal.astro";
+import FinalSection from "../sections/FinalSection.astro";
 ---
 
 <Layout pageTitle="Alchemizer AI">
@@ -44,117 +46,6 @@ import HeroSection from "../sections/HeroSection.astro";
     titleTwo="Next Level"
   />
   <div class="test" style="margin-top: 200px;"></div>
-  <div class="final-main" style="background-color: #18191b;">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <div class="col-md-6">
-          <h1 class="final-title">
-            <span>Transform</span> Your Music Creation
-          </h1>
-          <br />
-          <div
-            class="final-button"
-            data-bs-toggle="modal"
-            data-bs-target="#fullScreenModal"
-            style="color: #000000; background-color: white;"
-          >
-            <div class="final-button-text">Try Alchemizer</div>
-            <div class="final-button-icon">
-              <span class="material-symbols-outlined"> navigate_next </span>
-            </div>
-          </div>
-          <ButtonPrimary
-            data-bs-toggle="modal"
-            data-bs-target="#fullScreenModal"
-            style="color: #000000; background-color: white;"
-            text="Try Alchemizer"
-            textClass="final-button-text"
-            icon="navigate_next"
-            iconClass="final-button-icon"
-            id="btn-primary-final"
-          />
-        </div>
-        <div class="col-md-6">
-          <img
-            src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=768,quality=75,format=auto/Video_Editor_10560b9827/Video_Editor_10560b9827.png"
-            alt="Video Editor"
-            class="img-fluid"
-          />
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Modal -->
-  <div
-    class="modal fade"
-    id="fullScreenModal"
-    tabindex="-1"
-    aria-labelledby="fullScreenModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog modal-fullscreen">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title-main" id="fullScreenModalLabel">
-            Studio | Alchemizer AI
-          </h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <div class="row justify-content-between">
-              <div class="col-md-6">
-                <h1 class="modal-title">Step one</h1>
-                <br />
-                <div class="modal-button" id="select-audio">
-                  <div class="modal-button-text" id="select-audio-text">
-                    Select Audio
-                  </div>
-                  <div class="modal-button-icon">
-                    <span
-                      class="material-symbols-outlined"
-                      id="select-audio-symbol"
-                    >
-                      done
-                    </span>
-                  </div>
-                </div>
-                <br />
-                <h5>OR</h5>
-                <br />
-                <div
-                  class="modal-button"
-                  onclick="alert('Sorry setta functionality unavailable')"
-                >
-                  <div class="modal-button-text">Record Audio</div>
-                  <div class="modal-button-icon">
-                    <span class="material-symbols-outlined"> mic </span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <h1 class="modal-title">Step two</h1>
-                <br />
-                <div class="modal-button" id="upload-audio">
-                  <div class="modal-button-text">Upload Audio</div>
-                  <div class="modal-button-icon">
-                    <span class="material-symbols-outlined"> upload </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-info" data-bs-dismiss="modal"
-            >Close</button
-          >
-        </div>
-      </div>
-    </div>
-  </div>
+  <FinalSection titleOne="Transform" titleTwo="Your Music Creation" />
+  <MenuModal />
 </Layout>
