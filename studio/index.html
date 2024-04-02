@@ -11,14 +11,15 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../styles/studio.css">
     <script type="module" src="../assets/scripts/wave-audio-path-player/wave-audio-path-player.umd.js"></script>
+    <script defer src="../scripts/studio.js"></script>
 </head>
 
 <body>
     <div class="hero-section">
         <div class="container">
             <div class="row">
-                <h1 id="welcome-title">Hello, Adhil</h1>
-                <h2 id="welcome-subtitle">Welcome back to your studio.</h2>
+                <h1 id="welcome-title">Loading</h1>
+                <h2 id="welcome-subtitle">loading</h2>
             </div>
         </div>
         <div class="container" style="margin-top: 100px;">
@@ -28,10 +29,7 @@
                         <h2 id="audio_main_title">Afreen Afreen</h2>
                         <p id="audio_main_label">Original</p>
                     </div>
-                    <div class="row">
-                        <wave-audio-path-player src="../audio/test.mp3" wave-width="400" wave-height="80"
-                            color="#55007f"
-                            wave-options='{"animation":true,"samples":100, "type": "wave"}'></wave-audio-path-player>
+                    <div class="row" id="main-audio-player-container">
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12" id="mysection-2">
@@ -40,7 +38,7 @@
                     </div>
                     <div class="row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <div id="audio_example_container_1">
+                            <div id="audio_example_container_1" title="" onclick="loadAudioTemplate('example_audio_1')">
                                 <div class="card audio-example-1">
                                     <div class="card-body">
                                         <span class="material-symbols-outlined">
@@ -53,7 +51,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <div id="audio_example_container_2">
+                            <div id="audio_example_container_2" title="" onclick="loadAudioTemplate('example_audio_2')">
                                 <div class="card audio-example-2">
                                     <div class="card-body"><span class="material-symbols-outlined">
                                             play_arrow
@@ -79,7 +77,7 @@
             <div class="row justify-content-md-center">
                 <div class="col col-lg-auto">
                     <div class="main-button">
-                        <div class="main-button-text">Separate Audio</div>
+                        <div class="main-button-text" id="separate-audio">Separate Audio</div>
                         <div class="main-button-icon">
                             <span class="material-symbols-outlined">
                                 arrow_split

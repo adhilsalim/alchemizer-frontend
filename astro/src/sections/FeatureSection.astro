@@ -1,0 +1,37 @@
+---
+import ContentCard from "../components/cards/ContentCard.astro";
+const { titleOne, titleTwo } = Astro.props;
+---
+
+<div class="feature-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 text-center">
+        <p class="font-weight-bold display-4 feature-section-title">
+          {titleOne}
+          <br /><span>{titleTwo}</span>
+        </p>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+      <ContentCard
+        title="Get Stems"
+        description="Upload a music, song or even record your own. Separate instruments and vocals into different audio files."
+        image="https://cdn-site-assets.veed.io/cdn-cgi/image/width=360,quality=75,format=auto/Image_1_806c8dd2da_206b34b354/Image_1_806c8dd2da_206b34b354.png"
+        alt="Get Stems Card"
+      />
+      <ContentCard
+        title="Transform music"
+        description="Get instruments our of music. Convert one instrument to another! Or use your voice to play an instrument."
+        image="https://cdn-site-assets.veed.io/cdn-cgi/image/width=360,quality=75,format=auto/Image_1_806c8dd2da_206b34b354/Image_1_806c8dd2da_206b34b354.png"
+        alt="Transform music Card"
+      />
+      <ContentCard
+        title="Intuitive Interface"
+        description="Enjoy a user-friendly interface designed for both experienced musicians and music enthusiasts alike."
+        image="https://cdn-site-assets.veed.io/cdn-cgi/image/width=360,quality=75,format=auto/Image_1_806c8dd2da_206b34b354/Image_1_806c8dd2da_206b34b354.png"
+        alt="Intuitive Interface Card"
+      />
+    </div>
+  </div>
+</div>

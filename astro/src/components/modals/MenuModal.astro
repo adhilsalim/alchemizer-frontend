@@ -1,0 +1,73 @@
+---
+import ButtonPrimary from "../buttons/ButtonPrimary.astro";
+---
+
+<div
+  class="modal fade"
+  id="fullScreenModal"
+  tabindex="-1"
+  aria-labelledby="fullScreenModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title-main" id="fullScreenModalLabel">
+          Studio | Alchemizer AI
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-md-6">
+              <h1 class="modal-title">Step one</h1>
+              <br />
+              <ButtonPrimary
+                id="select-audio"
+                text="Select Audio"
+                icon="done"
+                textClass="modal-button-text"
+                iconClass="modal-button-icon"
+                buttonClass="modal-button"
+              />
+              <br />
+              <h5>OR</h5>
+              <br />
+              <ButtonPrimary
+                id="record-audio"
+                text="Record Audio"
+                icon="mic"
+                textClass="modal-button-text"
+                iconClass="modal-button-icon"
+                buttonClass="modal-button"
+                onclick="alert('Sorry setta functionality unavailable')"
+              />
+            </div>
+            <div class="col-md-6">
+              <h1 class="modal-title">Step two</h1>
+              <br />
+              <ButtonPrimary
+                id="upload-audio"
+                text="Upload Audio"
+                icon="upload"
+                textClass="modal-button-text"
+                iconClass="modal-button-icon"
+                buttonClass="modal-button"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info" data-bs-dismiss="modal"
+          >Close</button
+        >
+      </div>
+    </div>
+  </div>
+</div>

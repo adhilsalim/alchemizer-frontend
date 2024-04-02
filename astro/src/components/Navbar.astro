@@ -1,0 +1,114 @@
+---
+const { title, links } = Astro.props;
+---
+
+<style>
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-home-background-color {
+    background: rgba(208, 2, 27, 0.25);
+  }
+
+  .nav-container {
+    background: var(--nav-default-background-color);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 60px;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+    position: fixed;
+    top: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1000;
+    width: auto;
+    height: 50px;
+    max-width: 140px;
+    -webkit-transition: max-width 0.5s;
+    transition: max-width 0.5s ease-in-out;
+  }
+
+  .nav-expand {
+    max-width: 400px;
+  }
+
+  .nav-title-container {
+    white-space: nowrap;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .nav-title-container a {
+    text-decoration: none;
+    background: linear-gradient(to right, #8500ff 0%, #de00ff 100%);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* WebKit browsers */
+    color: transparent;
+    font-family: "Noto Sans Khojki", sans-serif;
+    font-weight: 700;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .nav-container:hover {
+    max-width: 400px;
+  }
+
+  .nav-list-container {
+    white-space: nowrap;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .nav-list {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 20px;
+  }
+
+  .nav-list li {
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .nav-item:hover {
+    color: #484444;
+  }
+</style>
+
+<nav>
+  <div class="nav-container">
+    <div class="nav-title-container">
+      <a href="index.html" class="nav-brand">{title}</a>
+    </div>
+    <div class="nav-list-container">
+      <ul class="nav-list">
+        {
+          Object.keys(links).map((linkKey) => (
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href={links[linkKey].href}
+                onmouseenter={`enter-${links[linkKey].mouseEventId}`}
+                onmouseleave={`leave-${links[linkKey].mouseEventId}`}
+              >
+                {links[linkKey].text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,10 @@
+---
+const { id, text, icon, textClass, iconClass, buttonClass } = Astro.props;
+---
+
+<div class={buttonClass} id={id}>
+  <div class={textClass}>{text}</div>
+  <div class={iconClass}>
+    <span class="material-symbols-outlined">{icon}</span>
+  </div>
+</div>
