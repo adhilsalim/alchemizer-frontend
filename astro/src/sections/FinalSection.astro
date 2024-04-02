@@ -1,7 +1,7 @@
 ---
 import ButtonPrimary from "../components/buttons/ButtonPrimary.astro";
 
-const { titleOne, titleTwo } = Astro.props;
+const { titleOne, titleTwo, image } = Astro.props;
 ---
 
 <div class="final-main" style="background-color: #18191b;">
@@ -25,11 +25,7 @@ const { titleOne, titleTwo } = Astro.props;
         />
       </div>
       <div class="col-md-6">
-        <img
-          src="https://cdn-site-assets.veed.io/cdn-cgi/image/width=768,quality=75,format=auto/Video_Editor_10560b9827/Video_Editor_10560b9827.png"
-          alt="Video Editor"
-          class="img-fluid"
-        />
+        <img src={image} alt="Video Editor" class="img-fluid" />
       </div>
     </div>
   </div>
